@@ -40,7 +40,7 @@ void receivedCallback(uint32_t from, String &msg) {
     memcpy(reassemblyBuffer + receivedLength, decoded, decodedLength);
     receivedLength += decodedLength;
 
-    // Here, we assume the whole MAVLink message is received
+    
     mavlink_message_t message;
     mavlink_status_t status;
 
