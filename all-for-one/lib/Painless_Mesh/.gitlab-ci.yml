@@ -1,0 +1,64 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: normal
+
+platformio:
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq python3-pip
+    - pip3 install platformio
+    - platformio lib --global install ArduinoJson TaskScheduler PubSubClient ESPAsyncTCP AsyncTCP
+  script:
+    - platformio ci --lib="." --board=nodemcuv2 examples/mqttBridge/mqttBridge.ino
+    - platformio ci --lib="." --board=nodemcuv2 examples/basic/basic.ino -O "build_flags = -Werror"
+    - platformio ci --lib="." --board=nodemcuv2 examples/startHere/startHere.ino -O "build_flags = -Wall -Wextra -Wno-unused-parameter -Werror"
+    - platformio ci --lib="." --board=esp32dev examples/startHere/startHere.ino -O "build_flags = -std=c++14 -Wno-incompatible-pointer-types"
+    - platformio ci --lib="." --board=nodemcuv2 examples/bridge/bridge.ino -O "build_flags = -Werror"
+    - platformio ci --lib="." --board=nodemcuv2 examples/logServer/logServer.ino -O "build_flags = -Werror"
+    - platformio ci --lib="." --board=nodemcuv2 examples/logClient/logClient.ino -O "build_flags = -Werror"
+    - platformio ci --lib="." --lib="./examples/namedMesh/" --board=esp32dev examples/namedMesh/namedMesh.ino -O ""
+
+catch_testing:
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq cmake
+    - apt-get install libboost-system-dev -y -qq
+    - cmake . -DCMAKE_CXX_FLAGS="-Wall -Werror"
+    - make
+  script:
+    - run-parts --regex catch_ bin/
+
+arduino:
+  before_script:
+    - wget https://downloads.arduino.cc/arduino-1.8.16-linux64.tar.xz
+    - tar xvfJ arduino-1.8.16-linux64.tar.xz
+    - cd arduino-1.8.16
+    - ./arduino --pref "boardsmanager.additional.urls=https://adafruit.github.io/arduino-board-index/package_adafruit_index.json,http://arduino.esp8266.com/stable/package_esp8266com_index.json" --save-prefs
+    - ./arduino --install-boards esp8266:esp8266
+    - ./arduino --install-library TaskScheduler
+    - ./arduino --install-library ArduinoJson
+    - git clone https://github.com/me-no-dev/ESPAsyncTCP; cp -r ESPAsyncTCP/src ~/Arduino/libraries/ESPAsyncTCP
+    - git clone https://github.com/me-no-dev/AsyncTCP; cp -r AsyncTCP/src ~/Arduino/libraries/AsyncTCP
+    - cp -r ../src ~/Arduino/libraries/painlessMesh
+  script:
+    - ./arduino -v --board esp8266:esp8266:d1_mini:xtal=80,eesz=4M1M --verify ../examples/startHere/startHere.ino
+    - ./arduino -v --board esp8266:esp8266:d1_mini:xtal=80,eesz=4M1M --verify ../examples/startHere/basic.ino
+
+pages:
+  script:
+  - apt-get update && apt-get install -y doxygen
+  - doxygen doxygen/Doxyfile
+  - mv doxygen/documentation/html/ public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+pages_develop:
+  script:
+  - apt-get update && apt-get install -y doxygen
+  - doxygen doxygen/Doxyfile
+  - mv doxygen/documentation/html/ html/
+  artifacts:
+    paths:
+    - html
+  only:
+  - develop 
