@@ -17,8 +17,8 @@ unsigned long serial_data_received_tfirst_ms;
 #include "esp_mesh.h"
 #include "esp_mesh_internal.h"
 #include "nvs_flash.h"
-#define CONFIG_MESH_ROUTER_SSID "Indlab-software 2.4"
-#define CONFIG_MESH_ROUTER_PASSWD "happysofts"
+#define CONFIG_MESH_ROUTER_SSID "YOUR-ROUTER-SSID"
+#define CONFIG_MESH_ROUTER_PASSWD "YOUR-ROUTER-PASSWORD"
 #define CONFIG_MESH_AP_PASSWD "12345678"
 #define CONFIG_MESH_ROUTE_TABLE_SIZE 50
 static const uint8_t MESH_ID[6] = { 0x77, 0x77, 0x77, 0x77, 0x77, 0x77};
