@@ -1,4 +1,4 @@
-// NODE
+// NODE ROUTER
 #include "PixhawkArduinoMAVLink.h" //has mavlink.h
 #include <string.h>
 #include <inttypes.h>
