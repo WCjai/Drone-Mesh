@@ -1,4 +1,4 @@
-// ROUTER
+// ROOT ROUTER
 #include "PixhawkArduinoMAVLink.h" //has mavlink.h
 #include <string.h>
 #include <inttypes.h>
@@ -13,11 +13,18 @@
 #include "driver/uart.h"
 
 /* Mesh WIFI config*/
-#define CONFIG_MESH_ROUTER_SSID "Indlab-software 2.4"
-#define CONFIG_MESH_ROUTER_PASSWD "happysofts"
+#define CONFIG_MESH_ROUTER_SSID "YOUR-WIFI-SSID"
+#define CONFIG_MESH_ROUTER_PASSWD "YOUR-WIFI-PASSWORD"
 #define CONFIG_MESH_AP_PASSWD "12345678"
-#define CONFIG_MESH_ROUTE_TABLE_SIZE 50
 static const uint8_t MESH_ID[6] = { 0x77, 0x77, 0x77, 0x77, 0x77, 0x77};
+
+/*WIFI config*/
+#define CONFIG_STATIC_IP "10.0.0.30"
+#define CONFIG_GATEWAY "10.0.0.1"
+#define CONFIG_NETMASK "255.255.255.0"
+int port_tcp = 5760;
+
+#define CONFIG_MESH_ROUTE_TABLE_SIZE 50
 #define MAX_RETRY 3
 
 #define ENABLE_TCP_DISABLE_Serial  0
@@ -29,7 +36,6 @@ static uint8_t tx_buf[BUFFER_SIZE] = { 0 };
 static uint8_t rx_buf[RX_BUFFER_SIZE] = { 0 };
 
 #if (ENABLE_TCP_DISABLE_Serial == 1)
-  int port_tcp = 5760;
   WiFiServer server(port_tcp);
   WiFiClient client;
 #else
@@ -37,7 +43,7 @@ static uint8_t rx_buf[RX_BUFFER_SIZE] = { 0 };
   const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_1;
    
 #endif
-
+esp_netif_t *netif_station = NULL;
 int Rtos_delay = 90;
 
 static bool is_mesh_connected = false;
@@ -58,10 +64,6 @@ void ip_event_handler(void *arg, esp_event_base_t event_base,
 void loop();
 
 
-
-void SerialFlushRx(void) {
-    while (Serial.available() > 0) { Serial.read(); }
-}
 
 void checkClientConnection() {
   #if (ENABLE_TCP_DISABLE_Serial == 1) 
@@ -95,14 +97,12 @@ void esp_mesh_p2p_tx_main(void *arg)
             checkClientConnection();
             InPacketSize = client.available();
         #else
-            //InPacketSize = Serial.available();
             size_t available_bytes = 0;
             uart_get_buffered_data_len(CONFIG_UART_PORT_NUM, &available_bytes);
         #endif
 
-        if (available_bytes > 0) {
-           
-
+        if (available_bytes > 0 || InPacketSize > 0) {
+    
             #if (ENABLE_TCP_DISABLE_Serial == 1)
                 len = client.read(tx_buf, sizeof(tx_buf));
             #else 
@@ -450,20 +450,16 @@ void setup() {
 
 
     #else
-    //   size_t rxbufsize = Serial.setRxBufferSize(4*1024); // Increased buffer size
-    //   size_t txbufsize = Serial.setTxBufferSize(2*1024); // Increased buffer size
-    //   Serial.begin(baudrate);
-    uart_config_t uart_config = {
-        .baud_rate = 115200,
-        .data_bits = UART_DATA_8_BITS,
-        .parity    = UART_PARITY_DISABLE,
-        .stop_bits = UART_STOP_BITS_1,
-        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
-    };
-    ESP_ERROR_CHECK(uart_param_config(CONFIG_UART_PORT_NUM, &uart_config));
-    ESP_ERROR_CHECK(uart_set_pin(CONFIG_UART_PORT_NUM, 1, 3, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
-    ESP_ERROR_CHECK(uart_driver_install(CONFIG_UART_PORT_NUM, 2 * BUFFER_SIZE, 2 * BUFFER_SIZE, 0, NULL, 0));
-
+        uart_config_t uart_config = {
+            .baud_rate = 115200,
+            .data_bits = UART_DATA_8_BITS,
+            .parity    = UART_PARITY_DISABLE,
+            .stop_bits = UART_STOP_BITS_1,
+            .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
+        };
+        ESP_ERROR_CHECK(uart_param_config(CONFIG_UART_PORT_NUM, &uart_config));
+        ESP_ERROR_CHECK(uart_set_pin(CONFIG_UART_PORT_NUM, 1, 3, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+        ESP_ERROR_CHECK(uart_driver_install(CONFIG_UART_PORT_NUM, 2 * BUFFER_SIZE, 2 * BUFFER_SIZE, 0, NULL, 0));
     #endif
 
     ESP_ERROR_CHECK(nvs_flash_init());
@@ -476,14 +472,24 @@ void setup() {
     /*  wifi initialization */
     wifi_init_config_t config = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&config));
-        /* Set the maximum Wi-Fi TX power */
-    //ESP_ERROR_CHECK(esp_wifi_set_max_tx_power(80));  // Set TX power to 20.5 dBm (maximum)
     ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &ip_event_handler, NULL));
     ESP_ERROR_CHECK(esp_wifi_set_storage(WIFI_STORAGE_FLASH));
     ESP_ERROR_CHECK(esp_wifi_start());
     ESP_ERROR_CHECK(esp_wifi_set_max_tx_power(80));  // Set TX power to 20.5 dBm (maximum)
     /*  gets this esp mac address, to prevent sending message to itself */
     esp_wifi_get_mac(WIFI_IF_STA, my_address.addr);
+
+    /* Static IP configuration */
+    esp_netif_dhcp_status_t status;
+    ESP_ERROR_CHECK(esp_netif_dhcpc_get_status(netif_sta, &status)); // Get DHCP client status
+    if (status != ESP_NETIF_DHCP_STOPPED) {
+        ESP_ERROR_CHECK(esp_netif_dhcpc_stop(netif_sta)); // Stop DHCP client if it's running
+    }
+    esp_netif_ip_info_t ip_info;
+    ip_info.ip.addr = ipaddr_addr(CONFIG_STATIC_IP); // Replace with your static IP
+    ip_info.netmask.addr = ipaddr_addr(CONFIG_NETMASK); // Replace with your subnet mask
+    ip_info.gw.addr = ipaddr_addr(CONFIG_GATEWAY); // Replace with your gateway
+    ESP_ERROR_CHECK(esp_netif_set_ip_info(netif_sta, &ip_info)); // Set the static IP
 
     /*  mesh initialization */
     ESP_ERROR_CHECK(esp_mesh_init());
@@ -507,10 +513,10 @@ void setup() {
     memcpy((uint8_t *) &cfg.mesh_id, MESH_ID, 6);
     /* router */
     cfg.channel = 0;
-    // cfg.router.ssid_len = strlen(CONFIG_MESH_ROUTER_SSID);
-    // memcpy((uint8_t *) &cfg.router.ssid, CONFIG_MESH_ROUTER_SSID, cfg.router.ssid_len);
-    // memcpy((uint8_t *) &cfg.router.password, CONFIG_MESH_ROUTER_PASSWD,
-    //        strlen(CONFIG_MESH_ROUTER_PASSWD));
+    cfg.router.ssid_len = strlen(CONFIG_MESH_ROUTER_SSID);
+    memcpy((uint8_t *) &cfg.router.ssid, CONFIG_MESH_ROUTER_SSID, cfg.router.ssid_len);
+    memcpy((uint8_t *) &cfg.router.password, CONFIG_MESH_ROUTER_PASSWD,
+            strlen(CONFIG_MESH_ROUTER_PASSWD));
     /* mesh softAP */
     ESP_ERROR_CHECK(esp_mesh_set_ap_authmode(WIFI_AUTH_WPA_WPA2_PSK));
     cfg.mesh_ap.max_connection = 6;
@@ -529,7 +535,7 @@ void setup() {
         server.begin();
         server.setNoDelay(true);
     #else 
-        //SerialFlushRx();
+        
     #endif
     
 
