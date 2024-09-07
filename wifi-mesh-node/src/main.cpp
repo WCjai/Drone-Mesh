@@ -13,8 +13,8 @@
 #include "driver/uart.h"
 
 /* mesh WIFI config*/
-#define CONFIG_MESH_ROUTER_SSID "Indlab-software 2.4"
-#define CONFIG_MESH_ROUTER_PASSWD "happysofts"
+#define CONFIG_MESH_ROUTER_SSID "YOUR-WIFI-SSID"
+#define CONFIG_MESH_ROUTER_PASSWD "YOUR-WIFI-PASSWORD"
 #define CONFIG_MESH_AP_PASSWD "12345678"
 #define CONFIG_MESH_ROUTE_TABLE_SIZE 50
 static const uint8_t MESH_ID[6] = { 0x77, 0x77, 0x77, 0x77, 0x77, 0x77};
@@ -26,7 +26,6 @@ int baudrate = 115200;
 const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_2;
 int Rtos_delay = 90;
 
-#define Drone Serial2
 #define RX_BUFFER_SIZE MESH_PACKET_SIZE
 static uint8_t tx_buf[BUFFER_SIZE] = { 0 };
 static uint8_t rx_buf[RX_BUFFER_SIZE] = { 0 };
@@ -47,10 +46,6 @@ void ip_event_handler(void *arg, esp_event_base_t event_base,
 
 void loop();
 
-
-void serialFlushRx(void) {
-    while (Drone.available() > 0) { Drone.read(); }
-}
 
 void esp_mesh_p2p_tx_main(void *arg)
 {
@@ -395,10 +390,6 @@ void mesh_event_handler(void *arg, esp_event_base_t event_base,
 
 
 void setup() {
-    // size_t rxbufsize = Drone.setRxBufferSize(4*1024); // Increased buffer size
-    // size_t txbufsize = Drone.setTxBufferSize(1024); // Increased buffer size
-    // Drone.begin(baudrate, SERIAL_8N1, 16, 17);
-
     uart_config_t uart_config = {
         .baud_rate = 115200,
         .data_bits = UART_DATA_8_BITS,
@@ -420,9 +411,6 @@ void setup() {
     /*  wifi initialization */
     wifi_init_config_t config = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&config));
-
-    /* Set the maximum Wi-Fi TX power */
-    //ESP_ERROR_CHECK(esp_wifi_set_max_tx_power(80));  // Set TX power to 20.5 dBm (maximum)
     ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &ip_event_handler, NULL));
     ESP_ERROR_CHECK(esp_wifi_set_storage(WIFI_STORAGE_FLASH));
     ESP_ERROR_CHECK(esp_wifi_start());
@@ -433,7 +421,7 @@ void setup() {
     ESP_ERROR_CHECK(esp_event_handler_register(MESH_EVENT, ESP_EVENT_ANY_ID, &mesh_event_handler, NULL));
     /*  set mesh topology */
     ESP_ERROR_CHECK(esp_mesh_set_topology(MESH_TOPO_TREE));
-    //ESP_ERROR_CHECK(esp_mesh_set_topology(MESH_TOPO_CHAIN));
+
     /*  set mesh max layer according to the topology */
     ESP_ERROR_CHECK(esp_mesh_set_max_layer(6));
     ESP_ERROR_CHECK(esp_mesh_set_vote_percentage(1));
@@ -453,10 +441,10 @@ void setup() {
     memcpy((uint8_t *) &cfg.mesh_id, MESH_ID, 6);
     /* router */
     cfg.channel = 0;
-    // cfg.router.ssid_len = strlen(CONFIG_MESH_ROUTER_SSID);
-    // memcpy((uint8_t *) &cfg.router.ssid, CONFIG_MESH_ROUTER_SSID, cfg.router.ssid_len);
-    // memcpy((uint8_t *) &cfg.router.password, CONFIG_MESH_ROUTER_PASSWD,
-    //        strlen(CONFIG_MESH_ROUTER_PASSWD));
+    cfg.router.ssid_len = strlen(CONFIG_MESH_ROUTER_SSID);
+    memcpy((uint8_t *) &cfg.router.ssid, CONFIG_MESH_ROUTER_SSID, cfg.router.ssid_len);
+    memcpy((uint8_t *) &cfg.router.password, CONFIG_MESH_ROUTER_PASSWD,
+            strlen(CONFIG_MESH_ROUTER_PASSWD));
     /* mesh softAP */
     ESP_ERROR_CHECK(esp_mesh_set_ap_authmode(WIFI_AUTH_WPA_WPA2_PSK));
     cfg.mesh_ap.max_connection = 6;
@@ -473,13 +461,11 @@ void setup() {
              esp_mesh_is_root_fixed() ? "root fixed" : "root not fixed",
              esp_mesh_get_topology(), esp_mesh_get_topology() ? "(chain)":"(tree)", esp_mesh_is_ps_enabled());
     
-    //serialFlushRx();
+    
 
 }
 
 void loop()
 {
     
-
-WiFi.setTxPower(WIFI_POWER_19_5dBm);
 }
