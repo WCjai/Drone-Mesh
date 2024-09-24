@@ -24,6 +24,13 @@ int baudrate = 115200;
 const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_2;
 int Rtos_delay = 90;
 
+uint8_t system_id = 10; // Your i.e. Arduino sysid
+uint8_t component_id = 161; // Your i.e. Arduino compid
+uint8_t type = MAV_TYPE_GCS;
+uint8_t autopilot = MAV_AUTOPILOT_INVALID;
+uint8_t received_sysid; // Pixhawk sysid
+uint8_t received_compid; // Pixhawk compid
+
 #define RX_BUFFER_SIZE MESH_PACKET_SIZE
 static uint8_t tx_buf[BUFFER_SIZE] = { 0 };
 static uint8_t rx_buf[RX_BUFFER_SIZE] = { 0 };
@@ -116,6 +123,37 @@ void esp_mesh_p2p_tx_main(void *arg)
     vTaskDelete(NULL);
 }
 
+void send_rc_override(uint8_t target_system, uint8_t target_component, uint16_t rc_value) {
+    mavlink_message_t msg;
+    uint8_t buffer[MAVLINK_MAX_PACKET_LEN];
+
+    // Initialize all channels to UINT16_MAX (ignores those channels)
+    uint16_t channels[18] = {UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, 
+                             UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, 
+                             UINT16_MAX, UINT16_MAX};
+
+    // Set the value for channel 3 (index 2 in array)
+    channels[2] = rc_value;  // Assuming you're overriding RC channel 3 (throttle, for example)
+
+    // Pack the RC_CHANNELS_OVERRIDE message
+    mavlink_msg_rc_channels_override_pack(
+        system_id,              // System ID of the sender (GCS)
+        component_id,           // Component ID of the sender (GCS)
+        &msg,                   // MAVLink message to pack into
+        target_system,          // Target system (ID of the vehicle)
+        target_component,       // Target component (ID of the vehicle component, e.g., autopilot)
+        channels[0], channels[1], channels[2], channels[3], channels[4], channels[5], channels[6], channels[7],  // RC channels 1-8
+        channels[8], channels[9], channels[10], channels[11], channels[12], channels[13], channels[14], channels[15],  // RC channels 9-16
+        channels[16], channels[17]  // RC channels 17-18
+    );
+
+    // Convert the packed message into a byte buffer
+    uint16_t len = mavlink_msg_to_send_buffer(buffer, &msg);
+
+    // Send the buffer over UART or another communication interface (replace with actual send function)
+    uart_write_bytes(CONFIG_UART_PORT_NUM, buffer, len);
+}
+
 void esp_mesh_p2p_rx_main(void *arg)
 {
     is_running = true;
@@ -163,6 +201,7 @@ void esp_mesh_p2p_rx_main(void *arg)
                     uint8_t send_buf[MAVLINK_MAX_PACKET_LEN];
                     int send_len = mavlink_msg_to_send_buffer(send_buf, &message);
                     uart_write_bytes(CONFIG_UART_PORT_NUM, send_buf, send_len);
+                    
 
                     ESP_LOGI("MESH", "Mavlink message parsed and sent via UART");
 
@@ -181,6 +220,7 @@ void esp_mesh_p2p_rx_main(void *arg)
             ESP_LOGE("MESH", "Buffer overflow detected. Message too large.");
             receivedLength = 0;
         }
+        send_rc_override(received_sysid, received_compid, 1000);
 
         vTaskDelay(1); // Yield to other tasks
     }
@@ -412,6 +452,58 @@ void mesh_event_handler(void *arg, esp_event_base_t event_base,
     }
 }
 
+void Stream(){
+  delay(2000);
+  int flag=1;
+  ESP_LOGE("AutoPilot", "Sending Heartbeats... ");
+  mavlink_message_t msghb;
+  mavlink_heartbeat_t heartbeat;
+  uint8_t bufhb[MAVLINK_MAX_PACKET_LEN];
+  mavlink_msg_heartbeat_pack(system_id, component_id, &msghb, type, autopilot, MAV_MODE_FLAG_CUSTOM_MODE_ENABLED, 0, MAV_STATE_STANDBY);
+  uint16_t lenhb = mavlink_msg_to_send_buffer(bufhb, &msghb);
+  delay(1000);
+  uart_write_bytes(CONFIG_UART_PORT_NUM, bufhb, lenhb);
+  ESP_LOGE("AutoPilot", "Heartbeats sent! Now will check for recieved heartbeats to record sysid and compid...");
+
+  // Looping untill we get the required data.
+  while(flag==1){
+    delay(1);
+    size_t available_bytes = 0;
+    uart_get_buffered_data_len(CONFIG_UART_PORT_NUM, &available_bytes);
+    while(available_bytes > 0){
+      mavlink_message_t msgpx;
+      mavlink_status_t statuspx;
+      uint8_t ch = uart_read_bytes(CONFIG_UART_PORT_NUM, &ch, 1, 20 / portTICK_RATE_MS);
+
+      if(mavlink_parse_char(MAVLINK_COMM_0, ch, &msgpx, &statuspx)){
+        ESP_LOGE("AutoPilot", "Message Parsing Done!");
+        switch(msgpx.msgid){
+          case MAVLINK_MSG_ID_HEARTBEAT:
+          {
+            mavlink_heartbeat_t packet;
+            mavlink_msg_heartbeat_decode(&msgpx, &packet);
+            received_sysid = msgpx.sysid; // Pixhawk sysid
+            received_compid = msgpx.compid; // Pixhawk compid
+            flag = 0;
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  // Sending request for data stream...
+  ESP_LOGE("AutoPilot", "Now sending request for data stream...");
+  delay(2000);
+  mavlink_message_t msgds;
+  uint8_t bufds[MAVLINK_MAX_PACKET_LEN];
+  mavlink_msg_request_data_stream_pack(system_id, component_id, &msgds, received_sysid, received_compid, MAV_DATA_STREAM_ALL , 0x05, 1);
+  uint16_t lends = mavlink_msg_to_send_buffer(bufds, &msgds);
+  delay(10);
+  uart_write_bytes(CONFIG_UART_PORT_NUM,bufds,lends);
+  ESP_LOGE("AutoPilot", "Request sent! Now you are ready to recieve datas...");
+}
+
 
 void setup() {
     uart_config_t uart_config = {
@@ -478,6 +570,7 @@ void setup() {
     ESP_LOGE("MESH", "mesh starts successfully, heap:%" PRId32 ", %s<%d>%s, ps:%d",  esp_get_minimum_free_heap_size(),
              esp_mesh_is_root_fixed() ? "root fixed" : "root not fixed",
              esp_mesh_get_topology(), esp_mesh_get_topology() ? "(chain)":"(tree)", esp_mesh_is_ps_enabled());
+    Stream();
     
 
 }
