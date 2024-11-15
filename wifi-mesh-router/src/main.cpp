@@ -285,7 +285,6 @@ void mesh_event_handler(void *arg, esp_event_base_t event_base,
         is_mesh_connected = true;
         if (esp_mesh_is_root()) {
             esp_netif_dhcpc_stop(netif_sta);
-            esp_netif_dhcpc_start(netif_sta);
         }
         esp_mesh_comm_p2p_start();
     }
