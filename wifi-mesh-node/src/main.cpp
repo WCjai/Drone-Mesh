@@ -21,8 +21,8 @@ static const uint8_t MESH_ID[6] = { 0x77, 0x77, 0x77, 0x77, 0x77, 0x77}; //MESH 
 #define BUFFER_SIZE 1024
 #define MESH_PACKET_SIZE 128
 int baudrate = 115200;
-//const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_2;
-const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_0;
+const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_2;
+//const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_0;
 int Rtos_delay = 90;
 
 uint8_t system_id = 10; // Your i.e. Arduino sysid
@@ -515,8 +515,8 @@ void setup() {
         .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
     };
     ESP_ERROR_CHECK(uart_param_config(CONFIG_UART_PORT_NUM, &uart_config));
-    //ESP_ERROR_CHECK(uart_set_pin(CONFIG_UART_PORT_NUM, 17, 16, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
-    uart_set_pin(CONFIG_UART_PORT_NUM, GPIO_NUM_21, GPIO_NUM_20, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+    ESP_ERROR_CHECK(uart_set_pin(CONFIG_UART_PORT_NUM, 17, 16, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+    //uart_set_pin(CONFIG_UART_PORT_NUM, GPIO_NUM_21, GPIO_NUM_20, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
     ESP_ERROR_CHECK(uart_driver_install(CONFIG_UART_PORT_NUM, 2 * BUFFER_SIZE, 2 * BUFFER_SIZE, 0, NULL, 0));
 
     ESP_ERROR_CHECK(nvs_flash_init());
