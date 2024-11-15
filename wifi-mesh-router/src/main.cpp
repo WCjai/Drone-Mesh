@@ -13,8 +13,8 @@
 #include "driver/uart.h"
 
 /* Mesh WIFI config*/
-#define CONFIG_MESH_ROUTER_SSID "YOUR-WIFI-SSID"
-#define CONFIG_MESH_ROUTER_PASSWD "YOUR-WIFI-PASSWORD"
+#define CONFIG_MESH_ROUTER_SSID "Indlab-software"
+#define CONFIG_MESH_ROUTER_PASSWD "happysofts"
 #define CONFIG_MESH_AP_PASSWD "12345678"
 static const uint8_t MESH_ID[6] = { 0x77, 0x77, 0x77, 0x77, 0x77, 0x77};
 
@@ -40,7 +40,7 @@ static uint8_t rx_buf[RX_BUFFER_SIZE] = { 0 };
   WiFiClient client;
 #else
   int baudrate = 115200;
-  const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_1;
+  const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_0;
    
 #endif
 esp_netif_t *netif_station = NULL;
@@ -135,13 +135,13 @@ void esp_mesh_p2p_tx_main(void *arg)
                             if (memcmp(route_table[i].addr, my_address.addr, 6) != 0) {
                                 esp_err_t err = esp_mesh_send(&route_table[i], &data, MESH_DATA_P2P, NULL, 0);
                                 if (err != ESP_OK) {
-                                    ESP_LOGE("MESH", "Error sending to nodes, retrying: %d", err);
+                                    ESP_LOGI("MESH", "Error sending to nodes, retrying: %d", err);
                                     err = esp_mesh_send(&route_table[i], &data, MESH_DATA_P2P, NULL, 0);
                                     if (err == ESP_OK) {
-                                        ESP_LOGE("MESH", "Data sent successfully after retry");
+                                        ESP_LOGI("MESH", "Data sent successfully after retry");
                                     }
                                 } else {
-                                    ESP_LOGE("MESH", "Data sent successfully");
+                                    ESP_LOGI("MESH", "Data sent successfully");
                                 }
                             }
                         }
@@ -175,8 +175,6 @@ void esp_mesh_p2p_rx_main(void *arg)
             ESP_LOGE("MESH", "Error receiving data: %d", err);
             continue;
         } 
-
-        ESP_LOGE("MESH", "Data received from node successfully");
 
         if (receivedLength + data.size <= BUFFER_SIZE) {
             memcpy(reassemblyBuffer + receivedLength, data.data, data.size);
