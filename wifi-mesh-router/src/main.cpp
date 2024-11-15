@@ -22,7 +22,7 @@ static const uint8_t MESH_ID[6] = { 0x77, 0x77, 0x77, 0x77, 0x77, 0x77};
 #define BUFFER_SIZE 1024
 #define MESH_PACKET_SIZE 128
 int baudrate = 115200;
-const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_1;
+const uart_port_t CONFIG_UART_PORT_NUM = UART_NUM_0;
 int Rtos_delay = 90;
 
 // Error counter to track persistent issues
@@ -426,7 +426,8 @@ void setup() {
         .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
     };
     ESP_ERROR_CHECK(uart_param_config(CONFIG_UART_PORT_NUM, &uart_config));
-    ESP_ERROR_CHECK(uart_set_pin(CONFIG_UART_PORT_NUM, 1, 3, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+    //ESP_ERROR_CHECK(uart_set_pin(CONFIG_UART_PORT_NUM, 1, 3, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+    uart_set_pin(CONFIG_UART_PORT_NUM, GPIO_NUM_21, GPIO_NUM_20, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
     ESP_ERROR_CHECK(uart_driver_install(CONFIG_UART_PORT_NUM, 2 * BUFFER_SIZE, 2 * BUFFER_SIZE, 0, NULL, 0));
 
 
@@ -481,7 +482,7 @@ void setup() {
 
     /* mesh start */
     ESP_ERROR_CHECK(esp_mesh_start());
-    ESP_LOGE("MESH", "mesh starts successfully, heap:%" PRId32 ", %s<%d>%s, ps:%d",  esp_get_minimum_free_heap_size(),
+    ESP_LOGE("MESH", "mesh starts successfully as router, heap:%" PRId32 ", %s<%d>%s, ps:%d",  esp_get_minimum_free_heap_size(),
              esp_mesh_is_root_fixed() ? "root fixed" : "root not fixed",
              esp_mesh_get_topology(), esp_mesh_get_topology() ? "(chain)":"(tree)", esp_mesh_is_ps_enabled());
     
