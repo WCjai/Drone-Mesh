@@ -124,36 +124,7 @@ void esp_mesh_p2p_tx_main(void *arg)
     vTaskDelete(NULL);
 }
 
-void send_rc_override(uint8_t target_system, uint8_t target_component, uint16_t rc_value) {
-    mavlink_message_t msg;
-    uint8_t buffer[MAVLINK_MAX_PACKET_LEN];
 
-    // Initialize all channels to UINT16_MAX (ignores those channels)
-    uint16_t channels[18] = {UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, 
-                             UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, UINT16_MAX, 
-                             UINT16_MAX, UINT16_MAX};
-
-    // Set the value for channel 3 (index 2 in array)
-    channels[2] = rc_value;  // Assuming you're overriding RC channel 3 (throttle, for example)
-
-    // Pack the RC_CHANNELS_OVERRIDE message
-    mavlink_msg_rc_channels_override_pack(
-        system_id,              // System ID of the sender (GCS)
-        component_id,           // Component ID of the sender (GCS)
-        &msg,                   // MAVLink message to pack into
-        target_system,          // Target system (ID of the vehicle)
-        target_component,       // Target component (ID of the vehicle component, e.g., autopilot)
-        channels[0], channels[1], channels[2], channels[3], channels[4], channels[5], channels[6], channels[7],  // RC channels 1-8
-        channels[8], channels[9], channels[10], channels[11], channels[12], channels[13], channels[14], channels[15],  // RC channels 9-16
-        channels[16], channels[17]  // RC channels 17-18
-    );
-
-    // Convert the packed message into a byte buffer
-    uint16_t len = mavlink_msg_to_send_buffer(buffer, &msg);
-
-    // Send the buffer over UART or another communication interface (replace with actual send function)
-    uart_write_bytes(CONFIG_UART_PORT_NUM, buffer, len);
-}
 
 void esp_mesh_p2p_rx_main(void *arg)
 {
@@ -221,7 +192,7 @@ void esp_mesh_p2p_rx_main(void *arg)
             ESP_LOGE("MESH", "Buffer overflow detected. Message too large.");
             receivedLength = 0;
         }
-        send_rc_override(received_sysid, received_compid, 1000);
+        
 
         vTaskDelay(1); // Yield to other tasks
     }
