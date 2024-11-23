@@ -1,0 +1,10 @@
+{
+    "cmake.ignoreCMakeListsMissing": true,
+    "files.associations": {
+        "array": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "string": "cpp"
+    }
+}

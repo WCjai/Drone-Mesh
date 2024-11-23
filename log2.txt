@@ -1,0 +1,871 @@
+[867936][E][main.cpp:1012] mesh_event_handler(): [MESH] <MESH_EVENT_PS_CHILD_DUTY>cidx:0, 40:22:d8:04:44:a8, duty:0
+[868679][E][main.cpp:828] mesh_event_handler(): [MESH] <MESH_EVENT_ROUTING_TABLE_ADD>add 1, new:2, layer:2
+[868681][E][main.cpp:261] updateNode(): [MESH] New node added: 40:22:d8:04:44:a8 (Layer: 3, CHILD)
+[868682][E][main.cpp:804] mesh_event_handler(): [MESH] <MESH_EVENT_CHILD_CONNECTED>aid:1, 40:22:d8:04:44:a8
+[870584][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (1) self_addressc0:5d:89:b0:db:d4
+[870586][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 3, CHILD)
+[900586][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[905136][E][main.cpp:384] cleanupOnParentDisconnect(): [MESH] Network topology cleaned up after parent disconnect
+[905138][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[905141][E][main.cpp:891] mesh_event_handler(): [MESH] <MESH_EVENT_PARENT_DISCONNECTED>reason:200, layer:-1
+[905149][E][main.cpp:630] esp_mesh_p2p_tx_main(): [MESH]  Error sending data: 16395
+[906341][E][main.cpp:384] cleanupOnParentDisconnect(): [MESH] Network topology cleaned up after parent disconnect
+[906344][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[906345][E][main.cpp:891] mesh_event_handler(): [MESH] <MESH_EVENT_PARENT_DISCONNECTED>reason:2, layer:-1
+[907543][E][main.cpp:384] cleanupOnParentDisconnect(): [MESH] Network topology cleaned up after parent disconnect
+[907546][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[907548][E][main.cpp:891] mesh_event_handler(): [MESH] <MESH_EVENT_PARENT_DISCONNECTED>reason:2, layer:-1
+[908747][E][main.cpp:384] cleanupOnParentDisconnect(): [MESH] Network topology cleaned up after parent disconnect
+[908748][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[908750][E][main.cpp:891] mesh_event_handler(): [MESH] <MESH_EVENT_PARENT_DISCONNECTED>reason:2, layer:-1
+[909948][E][main.cpp:384] cleanupOnParentDisconnect(): [MESH] Network topology cleaned up after parent disconnect
+[909951][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[909952][E][main.cpp:891] mesh_event_handler(): [MESH] <MESH_EVENT_PARENT_DISCONNECTED>reason:2, layer:-1
+[911150][E][main.cpp:384] cleanupOnParentDisconnect(): [MESH] Network topology cleaned up after parent disconnect
+[911153][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[911154][E][main.cpp:891] mesh_event_handler(): [MESH] <MESH_EVENT_PARENT_DISCONNECTED>reason:2, layer:-1
+[912353][E][main.cpp:384] cleanupOnParentDisconnect(): [MESH] Network topology cleaned up after parent disconnect
+[912355][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[912368][E][main.cpp:891] mesh_event_handler(): [MESH] <MESH_EVENT_PARENT_DISCONNECTED>reason:2, layer:-1
+[912420][E][main.cpp:983] mesh_event_handler(): [MESH] <MESH_EVENT_NETWORK_STATE>is_rootless:1
+[930587][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[939367][E][main.cpp:843] mesh_event_handler(): [MESH] <MESH_EVENT_NO_PARENT_FOUND>scan times:60
+[960588][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[990589][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (0) self_addressc0:5d:89:b0:db:d4
+[1018433][E][main.cpp:983] mesh_event_handler(): [MESH] <MESH_EVENT_NETWORK_STATE>is_rootless:0
+[1018444][E][main.cpp:261] updateNode(): [MESH] New node added: c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1018445][E][main.cpp:828] mesh_event_handler(): [MESH] <MESH_EVENT_ROUTING_TABLE_ADD>add 1, new:2, layer:-1
+[1018446][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1018448][E][main.cpp:261] updateNode(): [MESH] New node added: c0:5d:89:b0:ab:15 (Layer: 1, PARENT)
+[1018450][E][main.cpp:866] mesh_event_handler(): [MESH] <MESH_EVENT_PARENT_CONNECTED>layer:2-->2, parent:c0:5d:89:b0:ab:15<layer2>, ID:77:77:77:77:77:77, duty:0
+[1018452][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD, SELF)
+[1018453][E][main.cpp:951] mesh_event_handler(): [MESH] <MESH_EVENT_TODS_REACHABLE>state:0
+[1018455][E][main.cpp:912] mesh_event_handler(): [MESH] <MESH_EVENT_ROOT_ADDRESS>root address:c0:5d:89:b0:ab:15
+[1018457][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:ab:15 (Layer: 1, ROOT, PARENT)
+[1018458][E][main.cpp:917] mesh_event_handler(): [MESH] Root address assigned: c0:5d:89:b0:ab:15, layer 3
+[1019203][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453092 , lon : 71495859
+[1020590][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1020592][E][main.cpp:415] printNodeInfo(): [MESH] Node c0:5d:89:b0:ab:15 (Layer: 1, ROOT, PARENT)
+[1020593][E][main.cpp:415] printNodeInfo(): [MESH] Node c0:5d:89:b0:db:d4 (Layer: 2, CHILD, SELF)
+[1029231][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452835 , lon : 71495700
+[1039553][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452862 , lon : 71495944
+[1045920][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1045922][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1045923][E][main.cpp:261] updateNode(): [MESH] New node added: 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1045925][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1046897][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1046898][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1049880][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452937 , lon : 71496047
+[1049881][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1050594][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1050596][E][main.cpp:415] printNodeInfo(): [MESH] Node c0:5d:89:b0:db:d4 (Layer: 2, CHILD, SELF)
+[1050598][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1051448][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1051449][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1051451][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1051452][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1052423][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1052425][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1056979][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1056980][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1056982][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1056983][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1057927][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1057929][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1060201][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452995 , lon : 71496006
+[1060203][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1062507][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1062509][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1062510][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1062511][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1063438][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1063440][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1068041][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1068043][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1068044][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1068046][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1069023][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1069024][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1070518][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452866 , lon : 71496092
+[1070520][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1073682][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1073684][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1073685][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1073686][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1074641][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1074643][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1079218][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1079220][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1079221][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1079222][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1080172][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1080173][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1080600][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1080602][E][main.cpp:415] printNodeInfo(): [MESH] Node c0:5d:89:b0:db:d4 (Layer: 2, CHILD, SELF)
+[1080603][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1080838][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452711 , lon : 71496120
+[1080840][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1084739][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1084740][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1084742][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1084743][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1085718][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1085719][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1090266][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1090268][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1090269][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1090270][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1091162][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452541 , lon : 71496164
+[1091164][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1091228][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1091230][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1095852][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1095854][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1095855][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1095857][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1101484][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452610 , lon : 71496196
+[1101486][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1106126][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1106127][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452610
+[1106128][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496196
+[1106130][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453818
+[1106131][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495779
+[1106132][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 25.119122 meters
+[1110604][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1110606][E][main.cpp:415] printNodeInfo(): [MESH] Node c0:5d:89:b0:db:d4 (Layer: 2, CHILD, SELF)
+[1110607][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1111808][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452558 , lon : 71496312
+[1111810][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1116450][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1116452][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452558
+[1116453][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496312
+[1116454][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453801
+[1116455][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495878
+[1116456][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 26.957065 meters
+[1122126][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452621 , lon : 71496073
+[1122128][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1126768][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1126770][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452621
+[1126771][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496073
+[1126772][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453812
+[1126773][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496008
+[1126774][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.478553 meters
+[1127556][E][main.cpp:813] mesh_event_handler(): [MESH] <MESH_EVENT_CHILD_DISCONNECTED>aid:1, 40:22:d8:04:44:a8
+[1127559][E][main.cpp:837] mesh_event_handler(): [MESH] <MESH_EVENT_ROUTING_TABLE_REMOVE>remove 1, new:1, layer:2
+[1132453][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452599 , lon : 71496190
+[1132455][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1137095][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1137097][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452599
+[1137098][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496190
+[1137099][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453860
+[1137100][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496068
+[1137101][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 24.428843 meters
+[1140609][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (1) self_addressc0:5d:89:b0:db:d4
+[1140611][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1142790][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452657 , lon : 71496229
+[1142792][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1147418][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1147420][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452657
+[1147421][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496229
+[1147422][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453942
+[1147423][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496027
+[1147424][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 22.519425 meters
+[1153114][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452594 , lon : 71496177
+[1153116][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1157742][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1157743][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452594
+[1157745][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496177
+[1157746][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453991
+[1157747][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495949
+[1157748][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 22.403996 meters
+[1163413][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452581 , lon : 71496020
+[1163415][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1167778][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1167780][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452581
+[1167781][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496020
+[1167782][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453995
+[1167783][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495883
+[1167784][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 21.107920 meters
+[1170611][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (1) self_addressc0:5d:89:b0:db:d4
+[1170613][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1173734][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452408 , lon : 71495985
+[1173736][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1178054][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1178055][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452408
+[1178056][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495985
+[1178057][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453922
+[1178059][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495923
+[1178060][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.514898 meters
+[1184061][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452503 , lon : 71495770
+[1184062][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1188377][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1188379][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452503
+[1188380][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495770
+[1188381][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453799
+[1188382][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496043
+[1188383][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 20.419897 meters
+[1194378][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452330 , lon : 71495735
+[1194380][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1198748][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1198749][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452330
+[1198750][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495735
+[1198751][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453688
+[1198753][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496153
+[1198754][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 21.443305 meters
+[1200614][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (1) self_addressc0:5d:89:b0:db:d4
+[1200616][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1204699][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452158 , lon : 71495762
+[1204701][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1209024][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1209026][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452158
+[1209027][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495762
+[1209028][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453683
+[1209029][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496195
+[1209030][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 24.778999 meters
+[1215021][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452066 , lon : 71495784
+[1215023][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1219340][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1219342][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452066
+[1219343][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495784
+[1219344][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453797
+[1219345][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496114
+[1219346][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 28.786180 meters
+[1225346][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452367 , lon : 71495594
+[1225348][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1229665][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1229667][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452367
+[1229668][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495594
+[1229669][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453924
+[1229670][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496015
+[1229671][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 22.526848 meters
+[1230617][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (1) self_addressc0:5d:89:b0:db:d4
+[1230619][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1235775][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452420 , lon : 71495556
+[1235777][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1240000][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1240002][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452420
+[1240003][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495556
+[1240004][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453970
+[1240005][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496068
+[1240007][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 21.112998 meters
+[1245986][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452298 , lon : 71495629
+[1245988][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1250344][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1250345][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452298
+[1250346][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495629
+[1250348][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453957
+[1250349][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496147
+[1250350][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.328324 meters
+[1252435][E][main.cpp:261] updateNode(): [MESH] New node added: c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1252436][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1252438][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1252439][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1252441][E][main.cpp:261] updateNode(): [MESH] New node added: 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1252442][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:04:44:a8
+[1256310][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452366 , lon : 71495765
+[1256312][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1256315][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1260332][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1260333][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452366
+[1260334][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495765
+[1260335][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454039
+[1260337][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496076
+[1260338][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 22.139041 meters
+[1260619][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (3) self_addressc0:5d:89:b0:db:d4
+[1260621][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1260622][E][main.cpp:415] printNodeInfo(): [MESH] Node c0:5d:89:b0:db:d4 (Layer: 2, CHILD, SELF)
+[1260624][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1262524][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1262526][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452366
+[1262527][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495765
+[1262528][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453381
+[1262529][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494892
+[1262530][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 13.947643 meters
+[1266637][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452452 , lon : 71496036
+[1266639][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1266642][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1270320][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1270322][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452452
+[1270323][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496036
+[1270324][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454215
+[1270325][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495901
+[1270326][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.415750 meters
+[1272842][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1272844][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452452
+[1272845][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496036
+[1272846][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453311
+[1272847][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494961
+[1272848][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 13.256205 meters
+[1276951][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452822 , lon : 71496139
+[1276953][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1276957][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1280619][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1280620][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452822
+[1280621][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496139
+[1280622][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454307
+[1280623][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495885
+[1280625][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 19.978678 meters
+[1283163][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1283164][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452822
+[1283165][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496139
+[1283166][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453322
+[1283168][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494917
+[1283169][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 12.260092 meters
+[1287273][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452843 , lon : 71496106
+[1287275][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1287278][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1290624][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1290626][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1290627][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1291014][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1291016][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452843
+[1291017][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496106
+[1291018][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454348
+[1291019][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495757
+[1291020][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 20.799886 meters
+[1293484][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1293485][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452843
+[1293486][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496106
+[1293487][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453423
+[1293489][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494889
+[1293490][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 12.353565 meters
+[1297594][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452740 , lon : 71496057
+[1297596][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1297600][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1301262][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1301263][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452740
+[1301264][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496057
+[1301265][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454307
+[1301267][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495741
+[1301268][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 21.387553 meters
+[1307731][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452767 , lon : 71496012
+[1307733][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1307736][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1311591][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1311592][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452767
+[1311593][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496012
+[1311595][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454280
+[1311596][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495813
+[1311597][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 19.954134 meters
+[1314142][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1314144][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452767
+[1314145][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496012
+[1314146][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453528
+[1314147][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494831
+[1314148][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 13.727281 meters
+[1317904][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452804 , lon : 71496151
+[1317906][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1317911][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1320628][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1320630][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1320631][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1321911][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1321912][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452804
+[1321914][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496151
+[1321915][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454257
+[1321916][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495952
+[1321917][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 20.006198 meters
+[1324448][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1324449][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452804
+[1324450][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496151
+[1324451][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453412
+[1324453][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494813
+[1324454][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 13.327801 meters
+[1328231][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452828 , lon : 71496125
+[1328233][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1328237][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1331228][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 2 message.msgid: 33
+[1331230][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452828
+[1331231][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496125
+[1331232][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452842
+[1331233][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71496082
+[1331235][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 0.667867 meters
+[1332228][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1332230][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452828
+[1332231][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496125
+[1332232][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454239
+[1332233][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495965
+[1332235][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 18.506445 meters
+[1334865][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1334866][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452828
+[1334867][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496125
+[1334868][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453094
+[1334870][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494720
+[1334871][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 13.151954 meters
+[1338559][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452985 , lon : 71495931
+[1338561][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1338564][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1342557][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1342558][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452985
+[1342559][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495931
+[1342560][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454228
+[1342562][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495920
+[1342563][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 15.286706 meters
+[1345094][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1345096][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452985
+[1345097][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495931
+[1345098][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452736
+[1345099][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494528
+[1345100][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 14.915799 meters
+[1348871][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453201 , lon : 71495784
+[1348873][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1348878][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1350632][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1350634][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1350635][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1352893][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1352894][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453201
+[1352895][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495784
+[1352896][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454165
+[1352898][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495902
+[1352899][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 11.652487 meters
+[1355425][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1355426][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453201
+[1355427][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495784
+[1355429][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437451967
+[1355430][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494221
+[1355431][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 21.674780 meters
+[1359192][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453256 , lon : 71495692
+[1359194][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1359197][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1363204][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1363205][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453256
+[1363206][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495692
+[1363207][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454011
+[1363208][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495832
+[1363210][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 9.512798 meters
+[1365752][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1365753][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453256
+[1365754][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495692
+[1365755][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437451813
+[1365757][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494101
+[1365758][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.512027 meters
+[1369524][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453260 , lon : 71495735
+[1369526][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1369530][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1373197][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1373199][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453260
+[1373200][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495735
+[1373201][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453953
+[1373202][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495783
+[1373203][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 9.810798 meters
+[1376057][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1376058][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453260
+[1376060][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495735
+[1376061][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452008
+[1376062][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494091
+[1376063][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 21.596814 meters
+[1379839][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453175 , lon : 71495798
+[1379840][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1379843][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1380636][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1380638][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1380639][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1383513][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1383515][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453175
+[1383516][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495798
+[1383517][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453956
+[1383518][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495708
+[1383520][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 11.253202 meters
+[1386392][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1386393][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453175
+[1386394][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495798
+[1386396][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452090
+[1386397][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494083
+[1386398][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 20.248404 meters
+[1390267][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453092 , lon : 71495883
+[1390269][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1390276][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1393866][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1393868][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453092
+[1393869][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495883
+[1393870][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453968
+[1393871][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495738
+[1393872][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 12.330384 meters
+[1396392][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1396393][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453092
+[1396394][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495883
+[1396395][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452369
+[1396396][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494417
+[1396398][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 16.403825 meters
+[1400477][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453129 , lon : 71495922
+[1400479][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1400482][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1404155][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1404157][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453129
+[1404158][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495922
+[1404159][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454029
+[1404160][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495602
+[1404161][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 11.858795 meters
+[1410640][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1410642][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1410643][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1426422][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453021 , lon : 71496040
+[1426423][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1426427][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1426428][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453021
+[1426429][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496040
+[1426430][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452526
+[1426431][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494585
+[1426433][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 15.301758 meters
+[1426449][E][main.cpp:261] updateNode(): [MESH] New node added: c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1426451][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1426452][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1426453][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:04:44:a8
+[1426459][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1435082][E][main.cpp:238] updateNode(): [MESH] Updated node c0:5d:89:b0:db:d4 (Layer: 2, CHILD)
+[1435083][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo c0:5d:89:b0:db:d4
+[1435085][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1435086][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:04:44:a8
+[1435087][E][main.cpp:238] updateNode(): [MESH] Updated node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1435089][E][main.cpp:451] processReceivedChildInfo(): [MESH]  ProcessReceivedChildinfo 40:22:d8:06:ab:b8
+[1436439][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452884 , lon : 71496170
+[1436441][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1436447][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1436665][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1436666][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452884
+[1436667][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496170
+[1436669][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452782
+[1436670][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494865
+[1436671][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 10.608896 meters
+[1440644][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (3) self_addressc0:5d:89:b0:db:d4
+[1440646][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1440647][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1440648][E][main.cpp:415] printNodeInfo(): [MESH] Node c0:5d:89:b0:db:d4 (Layer: 2, CHILD, SELF)
+[1445322][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1445324][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452884
+[1445325][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496170
+[1445326][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454614
+[1445327][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71498400
+[1445328][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 28.479205 meters
+[1446761][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452956 , lon : 71496035
+[1446763][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1446766][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1446981][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1446982][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452956
+[1446983][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496035
+[1446984][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452691
+[1446985][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494748
+[1446987][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 10.850184 meters
+[1455344][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1455345][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452956
+[1455347][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496035
+[1455348][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454569
+[1455349][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71498405
+[1455350][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 28.275194 meters
+[1456760][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452977 , lon : 71495986
+[1456762][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1456765][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1457304][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1457305][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452977
+[1457306][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495986
+[1457308][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452718
+[1457309][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494706
+[1457310][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 10.791244 meters
+[1465649][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1465650][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452977
+[1465651][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495986
+[1465652][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454520
+[1465653][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71498373
+[1465655][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 27.824273 meters
+[1467073][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452826 , lon : 71496110
+[1467075][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1467080][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1467621][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1467623][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452826
+[1467624][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496110
+[1467625][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437452898
+[1467626][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71494802
+[1467627][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 10.723818 meters
+[1470649][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1470651][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1470652][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1475954][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1475956][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452826
+[1475957][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496110
+[1475958][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454473
+[1475959][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71498322
+[1475960][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 27.662078 meters
+[1477391][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452792 , lon : 71496135
+[1477393][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1477397][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1477942][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1477944][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452792
+[1477945][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496135
+[1477946][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453075
+[1477947][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495041
+[1477948][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 9.512159 meters
+[1486280][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1486282][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452792
+[1486283][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496135
+[1486284][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454486
+[1486285][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71498346
+[1486286][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 28.102010 meters
+[1487724][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452874 , lon : 71496065
+[1487725][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1487728][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1488266][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1488267][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452874
+[1488268][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496065
+[1488269][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453105
+[1488270][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495192
+[1488272][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 7.659414 meters
+[1496611][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1496612][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452874
+[1496613][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71496065
+[1496615][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454538
+[1496616][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71498371
+[1496617][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 28.592172 meters
+[1498057][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452984 , lon : 71495909
+[1498059][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1498061][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1498592][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1498593][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452984
+[1498594][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495909
+[1498595][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453051
+[1498596][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495251
+[1498598][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 5.617470 meters
+[1500653][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1500655][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1500656][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1506925][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1506926][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452984
+[1506927][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495909
+[1506928][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454473
+[1506929][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71498246
+[1506931][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 26.947302 meters
+[1508358][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453063 , lon : 71495757
+[1508360][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1508363][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1508908][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1508910][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453063
+[1508911][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495757
+[1508912][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453009
+[1508913][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495281
+[1508915][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 4.227423 meters
+[1517258][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1517259][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453063
+[1517260][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495757
+[1517261][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454432
+[1517262][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71498146
+[1517264][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 26.041420 meters
+[1518679][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453087 , lon : 71495604
+[1518681][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1518687][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1519252][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1519253][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453087
+[1519254][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495604
+[1519255][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453028
+[1519256][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495371
+[1519258][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 2.638405 meters
+[1527569][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1527571][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453087
+[1527572][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495604
+[1527573][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454449
+[1527574][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71498110
+[1527575][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 26.539122 meters
+[1528684][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453011 , lon : 71495712
+[1528686][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1528689][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1529558][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1529560][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453011
+[1529561][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495712
+[1529562][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453066
+[1529563][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495375
+[1529564][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 3.228767 meters
+[1530657][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1530659][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1530660][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1537926][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1537928][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453011
+[1537929][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495712
+[1537930][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454349
+[1537931][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497994
+[1537932][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 24.412034 meters
+[1538989][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452968 , lon : 71495772
+[1538991][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1538994][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1539875][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1539876][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452968
+[1539877][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495772
+[1539878][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453130
+[1539879][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495405
+[1539881][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 3.868300 meters
+[1548222][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1548223][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452968
+[1548224][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495772
+[1548226][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454366
+[1548227][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497980
+[1548228][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 24.493521 meters
+[1548987][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452881 , lon : 71495856
+[1548989][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1549017][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1550204][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1550206][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452881
+[1550207][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495856
+[1550208][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453225
+[1550209][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495551
+[1550211][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 4.832875 meters
+[1558541][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1558542][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452881
+[1558543][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495856
+[1558544][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454357
+[1558546][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497987
+[1558547][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 24.610875 meters
+[1559304][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452821 , lon : 71495850
+[1559306][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1559309][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1560518][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1560519][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452821
+[1560521][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495850
+[1560522][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453346
+[1560523][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495726
+[1560524][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 6.164043 meters
+[1560661][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1560663][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1560664][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1568938][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1568940][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452821
+[1568941][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495850
+[1568942][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454258
+[1568943][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497923
+[1568945][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.446912 meters
+[1569623][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452873 , lon : 71495876
+[1569625][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1569628][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1570840][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1570841][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452873
+[1570842][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495876
+[1570843][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453370
+[1570844][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495695
+[1570846][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 5.945130 meters
+[1578861][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1578862][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452873
+[1578864][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495876
+[1578865][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454288
+[1578866][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497960
+[1578867][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.384193 meters
+[1579945][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452936 , lon : 71495843
+[1579947][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1579952][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1581165][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1581166][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452936
+[1581167][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495843
+[1581168][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453276
+[1581169][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495512
+[1581171][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 4.847115 meters
+[1588902][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1588904][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452936
+[1588905][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495843
+[1588906][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454117
+[1588907][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497981
+[1588908][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 21.988495 meters
+[1590265][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437452928 , lon : 71495815
+[1590267][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1590270][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1590665][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1590667][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1590668][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1591486][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1591488][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452928
+[1591489][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495815
+[1591490][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453178
+[1591491][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495247
+[1591492][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 5.641114 meters
+[1599164][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1599165][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437452928
+[1599166][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495815
+[1599167][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454049
+[1599169][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497988
+[1599170][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 21.790324 meters
+[1600595][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453105 , lon : 71495696
+[1600597][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1600599][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1601805][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1601806][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453105
+[1601807][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495696
+[1601809][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453168
+[1601810][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495171
+[1601811][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 4.593337 meters
+[1609485][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1609487][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453105
+[1609488][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495696
+[1609489][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454028
+[1609490][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497977
+[1609491][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 21.344529 meters
+[1610912][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453209 , lon : 71495497
+[1610913][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1610916][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1612127][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1612128][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453209
+[1612129][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495497
+[1612130][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453196
+[1612132][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495201
+[1612133][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 2.858497 meters
+[1619809][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1619810][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453209
+[1619811][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495497
+[1619812][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454124
+[1619814][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497968
+[1619815][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.132071 meters
+[1620669][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1620671][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1620672][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1621231][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453168 , lon : 71495516
+[1621233][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1621236][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1622450][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1622451][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453168
+[1622452][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495516
+[1622453][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453313
+[1622455][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495192
+[1622456][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 3.577152 meters
+[1630137][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1630139][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453168
+[1630140][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495516
+[1630141][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454174
+[1630142][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497958
+[1630143][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.864925 meters
+[1631558][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453329 , lon : 71495449
+[1631560][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1631562][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1632774][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1632776][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453329
+[1632777][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495449
+[1632778][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453531
+[1632779][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495254
+[1632780][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 3.186804 meters
+[1640458][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1640459][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453329
+[1640460][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495449
+[1640461][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454207
+[1640463][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497932
+[1640464][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 23.676006 meters
+[1641557][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453223 , lon : 71495556
+[1641559][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1641562][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1643094][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1643096][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453223
+[1643097][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495556
+[1643098][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453409
+[1643099][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495253
+[1643100][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 3.661411 meters
+[1650673][E][main.cpp:324] printNodes(): [MESH] Current nodes in network (2) self_addressc0:5d:89:b0:db:d4
+[1650675][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:06:ab:b8 (Layer: 2, CHILD)
+[1650676][E][main.cpp:415] printNodeInfo(): [MESH] Node 40:22:d8:04:44:a8 (Layer: 2, CHILD)
+[1650778][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 1 message.msgid: 33
+[1650779][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453223
+[1650780][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495556
+[1650782][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437454299
+[1650783][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71497992
+[1650784][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 25.041361 meters
+[1651870][E][main.cpp:611] esp_mesh_p2p_tx_main(): [MESH]  GPS Position lat : 437453116 , lon : 71495733
+[1651872][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:06:ab:b8  successfully 33 
+[1651878][E][main.cpp:617] esp_mesh_p2p_tx_main(): [MESH]  Data send to node 40:22:d8:04:44:a8  successfully 33 
+[1653416][E][main.cpp:704] esp_mesh_p2p_rx_main(): [MESH] mysysid: 2 message.sysid: 3 message.msgid: 33
+[1653417][E][main.cpp:708] esp_mesh_p2p_rx_main(): [MESH] mylatitude: 437453116
+[1653418][E][main.cpp:709] esp_mesh_p2p_rx_main(): [MESH] mylongitude: 71495733
+[1653419][E][main.cpp:710] esp_mesh_p2p_rx_main(): [MESH] latitude: 437453367
+[1653421][E][main.cpp:711] esp_mesh_p2p_rx_main(): [MESH] longitude: 71495216
+[1653422][E][main.cpp:712] esp_mesh_p2p_rx_main(): [MESH] DistanceBetween: 5.278232 meters
+
